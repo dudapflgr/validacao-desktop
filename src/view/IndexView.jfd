@@ -1,0 +1,237 @@
+JFDML JFormDesigner: "8.1.0.0.283" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.GridLayout ) {
+			"columns": 1
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"minimumSize": new java.awt.Dimension( 1366, 768 )
+			"preferredSize": new java.awt.Dimension( 1366, 768 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+				name: "content"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0, 913:1.0, 68"
+					"$rowSpecs": "0:1.0, 0"
+					"$hGap": 5
+					"$vGap": 5
+				} ) {
+					name: "panel2"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "57, 574:1.0, 0, 0:1.0, 0:1.0, 0, 0"
+						"$rowSpecs": "0, 0, 0:1.0, 0, 0:1.0, 0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "panel1"
+						add( new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+							name: "menuBar1"
+							add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+								name: "menu"
+								"text": "Ações"
+								add( new FormComponent( "javax.swing.JMenuItem" ) {
+									name: "menuCadastrarChamado"
+									"text": "Cadastrar chamado"
+									addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "abrirModalCadastroChamado", true ) )
+								} )
+								add( new FormComponent( "javax.swing.JMenuItem" ) {
+									name: "menuItem2"
+									"text": "Cadastrar usuário"
+									addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cadastrarUsuario", true ) )
+								} )
+								add( new FormComponent( "javax.swing.JMenuItem" ) {
+									name: "menuItem3"
+									"text": "Visualizar usuários"
+									addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "visualizarUsuarios", true ) )
+								} )
+								add( new FormComponent( "javax.swing.JMenuItem" ) {
+									name: "menuItemAtualizarSenha"
+									"text": "Atualizar senha"
+									addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "atualizarSenha", true ) )
+								} )
+								add( new FormComponent( "javax.swing.JMenuItem" ) {
+									name: "menuItem4"
+									"text": "Cadastrar cliente"
+									addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "acessarCadastroCliente", true ) )
+								} )
+								add( new FormComponent( "javax.swing.JMenuItem" ) {
+									name: "menuItem5"
+									"text": "Visualizar clientes"
+									addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "abrirListaClientes", true ) )
+								} )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane1"
+							add( new FormComponent( "javax.swing.JTable" ) {
+								name: "tabelaChamados"
+								"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+									add( "Código do chamado" )
+									add( "Nome do cliente" )
+									add( "Título" )
+									add( "Data e hora abertura" )
+								}, new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								}, new java.util.Vector {
+									add( null )
+									add( false )
+									add( false )
+									add( false )
+								}, new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								"enabled": false
+								"columnSelectionAllowed": true
+								addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "editarApagarChamado", true ) )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridheight": 4
+							"gridx": 1
+							"gridy": 1
+						} )
+						add( new FormContainer( "javax.swing.JDesktopPane", new FormLayoutManager( class javax.swing.JDesktopPane ) ) {
+							name: "desktopPane1"
+							add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class java.awt.GridBagLayout ) {
+								"$columnSpecs": "0:1.0, 0:1.0"
+								"$rowSpecs": "0:1.0, 0:1.0, 0:1.0"
+								"$hGap": 5
+								"$vGap": 5
+								"$alignLeft": true
+								"$alignTop": true
+							} ) {
+								name: "internalFrame1"
+								"visible": true
+								"title": "Chamados abertos por mim"
+								"maximizable": true
+								"iconifiable": true
+								"closable": true
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane2"
+									add( new FormComponent( "javax.swing.JTable" ) {
+										name: "tabelaChamadosAbertos"
+										"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+											add( "Código do chamado" )
+											add( "Nome do cliente" )
+											add( "Título" )
+											add( "Data e hora abertura" )
+										}, new java.util.Vector {
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+										}, new java.util.Vector {
+											add( false )
+											add( false )
+											add( false )
+											add( null )
+										}, new java.util.Vector {
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+										} )
+										addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "editarApagarChamadoAbertoPorMim", true ) )
+									} )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridwidth": 2
+									"gridheight": 3
+								} )
+							}, new FormLayoutConstraints( null ) {
+								"x": 0
+								"y": 0
+								"width": 345
+								"height": 195
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+							"gridy": 1
+							"gridheight": 2
+							"gridwidth": 2
+						} )
+						add( new FormContainer( "javax.swing.JDesktopPane", new FormLayoutManager( class javax.swing.JDesktopPane ) ) {
+							name: "desktopPane2"
+							add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class java.awt.GridBagLayout ) {
+								"$columnSpecs": "0:1.0, 0:1.0"
+								"$rowSpecs": "0:1.0, 0:1.0, 0:1.0"
+								"$alignLeft": true
+								"$alignTop": true
+							} ) {
+								name: "internalFrame2"
+								"visible": true
+								"closable": true
+								"iconifiable": true
+								"maximizable": true
+								"resizable": true
+								"title": "Chamados em atendimento por mim"
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane3"
+									add( new FormComponent( "javax.swing.JTable" ) {
+										name: "tabelaChamadosAtendidos"
+										"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+											add( "Código do chamado" )
+											add( "Nome do cliente" )
+											add( "Título" )
+											add( "Data e hora abertura" )
+										}, new java.util.Vector {
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+										}, new java.util.Vector {
+											add( false )
+											add( null )
+											add( false )
+											add( false )
+										}, new java.util.Vector {
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+										} )
+										addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "editarAtualizarChamadosAtendidos", true ) )
+									} )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridwidth": 2
+									"gridheight": 3
+								} )
+							}, new FormLayoutConstraints( null ) {
+								"x": 0
+								"y": 0
+								"width": 345
+								"height": 175
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+							"gridy": 4
+							"gridwidth": 2
+							"gridheight": 2
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "botaoTodosChamados"
+							"text": "Todos os chamados"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "atualizarTabelaTodosOsChamados", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 5
+							"gridx": 1
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridwidth": 3
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 50 )
+			"size": new java.awt.Dimension( 1240, 505 )
+		} )
+	}
+}
